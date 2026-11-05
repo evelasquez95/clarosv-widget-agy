@@ -160,7 +160,7 @@ function createWidget(data) {
   const w = new ListWidget();
   w.backgroundColor = COLORS.bg;
   w.setPadding(11, 13, 10, 13);
-  w.url = "https://www.mitelcel.com/mitelcel/login";
+  w.url = "https://www.claro.com.sv";
 
   if (!data) {
     renderErrorWidget(w, "No pudimos cargar tus datos. Abre Scriptable para revisar tu conexión o credenciales.");
@@ -182,7 +182,7 @@ function createWidget(data) {
     : `${(data.consumedMB / 1000).toFixed(2)} GB`;
   const shortCutoff = String(data.cutoffDate || "").replace(/\s+de\s+([a-záéíóú]{3})[a-záéíóú]*/i, " $1");
 
-  renderHeader(w, "Mi Telcel", shortCutoff ? `Corte ${shortCutoff}` : "", data.daysLeft);
+  renderHeader(w, "Mi Claro", shortCutoff ? `Corte ${shortCutoff}` : "", data.daysLeft);
   w.addSpacer(4);
   renderGauge(w, data.totalMB > 0 ? ratio : null, `${remainingGB} GB`, `libres de ${totalGB} GB`);
   w.addSpacer(4);
@@ -391,14 +391,4 @@ function loadCache() {
 if (typeof Script !== "undefined") {
   main();
 }
-if (typeof module !== "undefined") {
-  module.exports = {
-    fetchTelcelData,
-    parseTelcelResponse,
-    createWidget,
-    loadCache,
-    getCredentials,
-    validateTelcelCredentials,
-    requestTelcel
-  };
-}
+
