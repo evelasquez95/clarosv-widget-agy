@@ -94,7 +94,7 @@ async function requestTelcel(url, method, headers, body, parseJson = true) {
 
 async function fetchTelcelData() {
   // 1. Token de Claro El Salvador (Reemplaza con tu token que empieza con eyJhb...)
-  const CLARO_TOKEN = "TU_TOKEN_AQUI"; 
+  const CLARO_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZXZlbGFzcXVlejk1QGdtYWlsLmNvbSIsInJvbGUiOiJGUk9OVCIsImlhdCI6MTc5MzkxMDAwMSwiZXhwIjoxNzkzOTEzNjAxfQ.5pwBaliw5-Zue-yRX0QG1aHdFXQu5yYfz0lu14gQ0wQ"; 
 
   // 2. Petición a la API de Claro
   const req = new Request("https://api.miclaro.com.gt/ServiceManagement/retrieveConsumptionDetailRenamed");
